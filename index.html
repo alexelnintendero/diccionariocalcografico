@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Diccionario Calcografico</title>
+
+    <style>
+      :root{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h3>Crear Diccionario</h3>
+    <input
+      onkeyup="addPress(event)"
+      type="text"
+      placeholder="Escribe tu palabra"
+      id="textInput"
+    >
+
+    <input
+    type="text"
+    placeholder="Contexto (opcional)"
+    id="anotationInput"
+    onkeyup="addPress(event)"
+    >
+    <button type="button" name="button" onclick="addPress('button')">Enviar</button>
+    <br>
+    <button onclick="eliminateDiccionary('button')">Eliminar diccionario guardado</button>
+    <button onclick="seeDiccionary()">Ver diccionario guardado</button>
+
+
+    <h3>Practicar</h3>
+    <button type="button" name="button" onclick="gameInitialize()">Iniciar práctica</button>
+    <br>
+    <input type="text" id="gameInput" onkeyup="gamePress(event)" > </input>
+    <button type="button" name="button" onclick="speechWord(targetPosition)">Repetir Palabra</button>
+    <button type="button" name="button" onclick="gamePress('click')">Siguiente Palabra</button>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
